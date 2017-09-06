@@ -15,7 +15,7 @@
 		39137BED1F5E362D000F5AA0 /* MathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39137BEB1F5E362D000F5AA0 /* MathViewController.xib */; };
 		39137BEF1F5E41A6000F5AA0 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39137BEE1F5E41A6000F5AA0 /* Music.swift */; };
 		39137BF11F5F8A53000F5AA0 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39137BF01F5F8A53000F5AA0 /* MusicService.swift */; };
-		39137BF61F5F8CBF000F5AA0 /* ParserMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39137BF51F5F8CBF000F5AA0 /* ParserMusic.swift */; };
+		39137BF91F5F9C91000F5AA0 /* MusicParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39137BF81F5F9C91000F5AA0 /* MusicParser.swift */; };
 		72B681E40FDCAED1AA54B560 /* Pods_Favorite_Musics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF8E4748F87FAAF492E3C15 /* Pods_Favorite_Musics.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		39137BEB1F5E362D000F5AA0 /* MathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MathViewController.xib; sourceTree = "<group>"; };
 		39137BEE1F5E41A6000F5AA0 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		39137BF01F5F8A53000F5AA0 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
-		39137BF51F5F8CBF000F5AA0 /* ParserMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMusic.swift; sourceTree = "<group>"; };
+		39137BF81F5F9C91000F5AA0 /* MusicParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicParser.swift; sourceTree = "<group>"; };
 		7DF8E4748F87FAAF492E3C15 /* Pods_Favorite_Musics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_Musics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF228EF2F962FAADC226698 /* Pods-Favorite Musics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Musics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Musics/Pods-Favorite Musics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +69,7 @@
 		39137BA11F5D6791000F5AA0 /* Favorite Musics */ = {
 			isa = PBXGroup;
 			children = (
-				39137BF41F5F8C9A000F5AA0 /* Parsers */,
+				39137BF71F5F9C7F000F5AA0 /* Parser */,
 				39137BE01F5E3605000F5AA0 /* Model */,
 				39137BE11F5E3605000F5AA0 /* Service */,
 				39137BE21F5E3605000F5AA0 /* View */,
@@ -131,12 +131,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		39137BF41F5F8C9A000F5AA0 /* Parsers */ = {
+		39137BF71F5F9C7F000F5AA0 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				39137BF51F5F8CBF000F5AA0 /* ParserMusic.swift */,
+				39137BF81F5F9C91000F5AA0 /* MusicParser.swift */,
 			);
-			name = Parsers;
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		4B177CBFC13FD8F6A579B261 /* Frameworks */ = {
@@ -285,9 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39137BF91F5F9C91000F5AA0 /* MusicParser.swift in Sources */,
 				39137BCE1F5E2D1F000F5AA0 /* AppDelegate.swift in Sources */,
 				39137BF11F5F8A53000F5AA0 /* MusicService.swift in Sources */,
-				39137BF61F5F8CBF000F5AA0 /* ParserMusic.swift in Sources */,
 				39137BEC1F5E362D000F5AA0 /* MathViewController.swift in Sources */,
 				39137BE81F5E361B000F5AA0 /* LikeViewController.swift in Sources */,
 				39137BEF1F5E41A6000F5AA0 /* Music.swift in Sources */,
