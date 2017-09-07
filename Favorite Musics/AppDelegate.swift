@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            window.backgroundColor = UIColor.white
+//            window.backgroundColor = UIColor.white
             let music = MathViewController(nibName: "MathViewController", bundle:nil)
             let like = LikeViewController(nibName: "LikeViewController", bundle:nil)
             
@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBarController.viewControllers = [nav1,nav2]
             
             self.window!.rootViewController = tabBarController
-            //window.rootViewController = ViewController()
             window.makeKeyAndVisible()
         }
         return true

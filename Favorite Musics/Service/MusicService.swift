@@ -10,6 +10,10 @@ import Foundation
 import Alamofire
 
 class MusicService {
+    let BASEURL = "https://itunes.apple.com"
+    let ENDPOINT = "/search?resultEntity=music&country=BR&"
+    let TERMS = "term="
+    
     static 	let instance = MusicService()
     
     private let manager: Alamofire.SessionManager = {
@@ -19,8 +23,8 @@ class MusicService {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
-    func getMusics(completionHandler: @escaping (_ music: [Music]?, _ success: Bool, _ error: Error?) -> ()) {
-        manager.request("https://itunes.apple.com/search?term=jack+johnson&limit=1").validate().responseJSON { (response) in
+    func getMusics(musicName:String ,completionHandler: @escaping (_ music: [Music]?, _ success: Bool, _ error: Error?) -> ()) {
+        manager.request(BASEURL + ENDPOINT + TERMS + musicName).validate().responseJSON { (response) in
             debugPrint(response)
             
             //to get status code
@@ -40,6 +44,16 @@ class MusicService {
                 return
             }
             
+            //remove mock
+            var musicArray = [Music]()
+            
+            for index in 1...5 {
+                let m = Music(trackName: "Track \(index)", artistName: "Artist \(index)", photo: "Teste \(index)")
+                musicArray.append(m)
+            }
+            completionHandler(musicArray, true, nil)
+            
+            
             //to get JSON return value
             guard let responseJSON = response.result.value as? [String: Any],
                 let list = responseJSON["results"] as? [String: Any] else {
@@ -49,15 +63,14 @@ class MusicService {
             }
             
             debugPrint(list)
-            var musicArray = [Music]()
             
-            for musicDictionary in list {
-                if let m = Music.parseToMusic(dictionary: musicDictionary) {
-                    musicArray.append(m)
-                }
-            }
+//            for musicDictionary in list {
+//                if let m = Music.parseToMusic(dictionary: musicDictionary) {
+//                    musicArray.append(m)
+//                }
+//            }
             
-            completionHandler(musicArray, true, nil)
+            //completionHandler(musicArray, true, nil)
         }
     }
 }

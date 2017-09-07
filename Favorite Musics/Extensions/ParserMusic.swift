@@ -5,7 +5,6 @@
 //  Created by Ezequiel Messore on 05/09/17.
 //  Copyright © 2017 Ezequiel Messore. All rights reserved.
 //
-
 import Foundation
 
 extension Music {
